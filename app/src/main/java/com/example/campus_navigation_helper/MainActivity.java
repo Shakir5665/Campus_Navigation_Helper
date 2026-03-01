@@ -27,6 +27,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new android.content.Intent(MainActivity.this,
                     com.example.campus_navigation_helper.activities.LoginActivity.class));
         }
-        finish(); // Close MainActivity so user can't go back to it
+        finish();
     }
 }
