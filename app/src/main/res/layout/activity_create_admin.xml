@@ -10,60 +10,60 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create New Admin"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#333333"
         android:layout_marginBottom="32dp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="Create New Admin"
+        android:textColor="#333333"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/etAdminName"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="Admin Name"
+        android:layout_marginBottom="16dp"
         android:background="@android:drawable/editbox_background"
-        android:padding="12dp"
-        android:layout_marginBottom="16dp"/>
+        android:hint="Admin Name"
+        android:padding="12dp" />
 
     <EditText
         android:id="@+id/etAdminEmail"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/editbox_background"
         android:hint="Admin Email"
         android:inputType="textEmailAddress"
-        android:background="@android:drawable/editbox_background"
-        android:padding="12dp"
-        android:layout_marginBottom="16dp"/>
+        android:padding="12dp" />
 
     <EditText
         android:id="@+id/etAdminPassword"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/editbox_background"
         android:hint="Password"
         android:inputType="textPassword"
-        android:background="@android:drawable/editbox_background"
-        android:padding="12dp"
-        android:layout_marginBottom="16dp"/>
+        android:padding="12dp" />
 
     <EditText
         android:id="@+id/etAdminSecret"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:background="@android:drawable/editbox_background"
         android:hint="Admin Secret Code"
         android:inputType="textPassword"
-        android:background="@android:drawable/editbox_background"
-        android:padding="12dp"
-        android:layout_marginBottom="32dp"/>
+        android:padding="12dp" />
 
     <Button
         android:id="@+id/btnCreateAdminSubmit"
         android:layout_width="match_parent"
         android:layout_height="56dp"
+        android:backgroundTint="#0F0566"
         android:text="Create Admin"
-        android:backgroundTint="#D32F2F"
-        android:textColor="@color/white"
         android:textAllCaps="false"
-        android:textSize="18sp"/>
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
 </LinearLayout>
