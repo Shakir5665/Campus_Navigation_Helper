@@ -11,6 +11,8 @@ import androidx.cardview.widget.CardView;
 
 import com.example.campus_navigation_helper.R;
 
+//Class DashboardActivity
+
 public class DashboardActivity extends AppCompatActivity {
 
     private TextView tvWelcome;
