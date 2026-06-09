@@ -49,6 +49,12 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
+        // Email validation
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            Toast.makeText(this, "Please enter a valid email address", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         Cursor cursor = dbHelper.loginUser(email, password);
         if (cursor != null && cursor.moveToFirst()) {
             // Login successful

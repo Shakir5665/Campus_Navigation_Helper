@@ -20,7 +20,7 @@ import java.util.List;
 
 public class AddLocationActivity extends AppCompatActivity {
 
-    private EditText etName, etBlock, etDesc;
+    private EditText etName, etBlock,etblock2, etDesc;
     private Button btnAddStep, btnSaveLocation;
     private RecyclerView rvEditSteps;
     private TextView tvTitle;
@@ -53,6 +53,7 @@ public class AddLocationActivity extends AppCompatActivity {
         tvTitle = findViewById(R.id.tvAddLocationTitle);
         etName = findViewById(R.id.etLocName);
         etBlock = findViewById(R.id.etLocBlock);
+        etBlock2 = findViewById(R.id.etBlock2);
         etDesc = findViewById(R.id.etLocDesc);
         btnAddStep = findViewById(R.id.btnAddStep);
         btnSaveLocation = findViewById(R.id.btnSaveLocation);
@@ -106,10 +107,12 @@ public class AddLocationActivity extends AppCompatActivity {
 
     private void saveLocation() {
         String name = etName.getText().toString().trim();
+
         String block = etBlock.getText().toString().trim();
+        String block2 = etBlock2.getText().toString().trim();
         String desc = etDesc.getText().toString().trim();
 
-        if (name.isEmpty() || block.isEmpty()) {
+        if (name.isEmpty()|| block.isEmpty() && block2) {
             Toast.makeText(this, "Name and Block are required", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -122,13 +125,13 @@ public class AddLocationActivity extends AppCompatActivity {
             }
         }
 
-        if (validSteps.isEmpty()) {
-            Toast.makeText(this, "Please add at least one valid step", Toast.LENGTH_SHORT).show();
-            return;
-        }
+//        if (validSteps.isEmpty()) {
+//            Toast.makeText(this, "Please add at least one valid step", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
 
         if (isEditing) {
-            dbHelper.updateLocation(locationId, name, block, desc);
+            dbHelper.updateLocation(locationId, name, block,block2, desc);
             dbHelper.deleteNavigationStepsForLocation(locationId);
             for (int i = 0; i < validSteps.size(); i++) {
                 dbHelper.addNavigationStep(locationId, i + 1, validSteps.get(i));

@@ -57,7 +57,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="16dp"
         android:hint="Password"
         android:textColorHint="@color/white"
         app:boxStrokeColor="@color/white"
@@ -67,6 +67,26 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etRegPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:hint="Confirm Password"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="@color/white"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRegConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"

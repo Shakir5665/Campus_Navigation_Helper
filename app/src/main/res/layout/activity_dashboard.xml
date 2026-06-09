@@ -18,6 +18,7 @@
             android:layout_height="60dp"
             android:layout_alignParentEnd="true"
             android:src="@drawable/ic_profile"
+            android:rotation="180"
             app:tint="@color/white" />
 
         <TextView

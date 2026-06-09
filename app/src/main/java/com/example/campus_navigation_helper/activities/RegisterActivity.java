@@ -14,7 +14,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private TextInputEditText etName, etEmail, etPassword;
+    private TextInputEditText etName, etEmail, etPassword, etConfirmPassword;
     private Button btnRegister;
     private TextView tvLoginLink;
     private DatabaseHelper dbHelper;
@@ -29,6 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
         etName = findViewById(R.id.etRegName);
         etEmail = findViewById(R.id.etRegEmail);
         etPassword = findViewById(R.id.etRegPassword);
+        etConfirmPassword = findViewById(R.id.etRegConfirmPassword);
         btnRegister = findViewById(R.id.btnRegister);
         tvLoginLink = findViewById(R.id.tvLoginLink);
 
@@ -43,9 +44,22 @@ public class RegisterActivity extends AppCompatActivity {
         String name = etName.getText().toString().trim();
         String email = etEmail.getText().toString().trim();
         String password = etPassword.getText().toString().trim();
+        String confirmPassword = etConfirmPassword.getText().toString().trim();
 
-        if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
+        if (name.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
             Toast.makeText(this, "Please fill all required fields", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Email validation
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            Toast.makeText(this, "Please enter a valid email address", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Password matching validation
+        if (!password.equals(confirmPassword)) {
+            Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show();
             return;
         }
 

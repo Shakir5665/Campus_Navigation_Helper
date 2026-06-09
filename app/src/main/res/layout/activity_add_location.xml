@@ -39,6 +39,13 @@
                 android:layout_height="wrap_content"
                 android:hint="Block"
                 android:layout_marginBottom="12dp"/>
+
+            <EditText
+                android:id="@+id/etLocBlock2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Block2"
+                android:layout_marginBottom="12dp"/>
                 
             <EditText
                 android:id="@+id/etLocDesc"

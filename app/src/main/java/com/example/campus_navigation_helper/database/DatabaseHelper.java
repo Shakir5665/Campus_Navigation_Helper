@@ -12,13 +12,7 @@ import com.example.campus_navigation_helper.models.NavigationStep;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * This class helps manage the SQLite database for the app.
- * It handles creating tables, preloading data, and user authentication.
- * 
- * Beginner Tip: SQL is a language used to talk to databases. SQLite is a
- * lightweight version of SQL that runs directly on your phone!
- */
+
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Database name and version
@@ -73,8 +67,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // Insert Default Master Admin
         ContentValues adminValues = new ContentValues();
-        adminValues.put(COL_USER_NAME, "Mohamed Shakir (Admin)");
-        adminValues.put(COL_USER_EMAIL, "shakiradmin123@gmail.com");
+        adminValues.put(COL_USER_NAME, "Master Admin");
+        adminValues.put(COL_USER_EMAIL, "masteradmin@gmail.com");
         adminValues.put(COL_USER_PASSWORD, "123");
         adminValues.put(COL_USER_ROLE, "master_admin");
         db.insert(TABLE_USERS, null, adminValues);

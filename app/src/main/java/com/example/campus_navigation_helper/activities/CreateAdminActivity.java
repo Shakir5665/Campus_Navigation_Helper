@@ -52,6 +52,12 @@ public class CreateAdminActivity extends AppCompatActivity {
             return;
         }
 
+        // Email validation
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            Toast.makeText(this, "Please enter a valid email address", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         boolean success = dbHelper.registerUser(name, email, pwd, "admin", secret);
         if (success) {
             Toast.makeText(this, "Admin created successfully!", Toast.LENGTH_SHORT).show();

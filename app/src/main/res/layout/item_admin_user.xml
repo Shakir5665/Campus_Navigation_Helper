@@ -13,37 +13,47 @@
         android:orientation="horizontal"
         android:padding="16dp"
         android:gravity="center_vertical">
-        
+
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="298dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/tvAdminUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="User Name"
+                android:textColor="#333333"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#333333"/>
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/tvAdminUserEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Email"
-                android:textColor="#666666"/>
+                android:textColor="#666666" />
+
             <TextView
                 android:id="@+id/tvAdminUserRole"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Role: user"
                 android:textColor="#6200EE"
-                android:textStyle="italic"/>
+                android:textStyle="italic" />
         </LinearLayout>
             
         <ImageView
             android:id="@+id/ivDeleteUser"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:tint="#FF5252"
+            android:src="@android:drawable/ic_menu_delete"/>
+
+        <ImageView
+            android:id="@+id/ivDeleteUser1"
             android:layout_width="32dp"
             android:layout_height="32dp"
             app:tint="#FF5252"
